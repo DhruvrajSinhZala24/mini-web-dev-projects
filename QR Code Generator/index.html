@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="theme-toggle">
+            <input type="checkbox" id="theme-toggle">
+            <span class="slider round"></span>
+        </label>
+        <em>Light/Dark Theme</em>
+    </div>
+
+    <div class="container">
+        <h1>QR Code Generator</h1>
+        <input type="text" id="url" placeholder="Enter URL">
+        <select id="size">
+            <option value="100">100x100</option>
+            <option value="200">200x200</option>
+            <option value="300" selected>300x300</option>
+            <option value="400">400x400</option>
+        </select>
+        <button id="generate">Generate QR Code</button>
+
+        <div id="spinner" class="spinner hidden"></div>
+
+        <div id="qrcode"></div>
+
+        <input type="text" id="filename" placeholder="Enter filename to save">
+        <button id="download" class="hidden">Download QR Code</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
